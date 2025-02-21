@@ -9,6 +9,7 @@ def search_files(directorio):
 
       if os.path.isdir(ruta_completa):
         search_files(ruta_completa)
+        print(f"\t\t\tCARPETA: {item}")
       else:
         size_gb = os.stat(ruta_completa).st_size / 1_073_741_824  # Convertir a GB
         print(ruta_completa, "-----", round(size_gb, 2), "GB")
