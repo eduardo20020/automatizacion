@@ -11,7 +11,7 @@ def search_files(directorio):
         search_files(ruta_completa)
       else:
         size_gb = os.stat(ruta_completa).st_size / 1_073_741_824  # Convertir a GB
-        print(ruta_completa, "\t\t||\t", round(size_gb, 2), "GB")
+        print(ruta_completa, "\t\t\t-------------------------------------------||", round(size_gb, 2), "GB")
 
 search_files(r"/root/cattana/ENTRETENIMIENTO/POST ENTRETENIMIENTO/To_GALILEO")
 
