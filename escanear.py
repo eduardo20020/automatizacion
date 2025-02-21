@@ -1,14 +1,7 @@
 import os
 
 def search_files(directorio: str, indent: int = 0) -> None:
-    """
-    Recorre recursivamente 'directorio' y muestra:
-      - Encabezado con el nombre de la carpeta si contiene archivos.
-      - Cada archivo con su tamaño en GB.
-      - Si una subcarpeta está vacía, lo indica.
-    
-    El parámetro 'indent' permite formatear la salida para visualizar la jerarquía.
-    """
+
     try:
         items = os.listdir(directorio)
     except (PermissionError, FileNotFoundError) as error:
