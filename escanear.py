@@ -1,17 +1,17 @@
 import os
 
-def search_files(directory):
+def search_files(directorio):
   
-    for file in os.listdir(directory):
+    for item in os.listdir(directorio):
       
-      full_path = os.path.join(directory, file)
+      ruta_completa = os.path.join(directorio, item)
       
 
-      if os.path.isdir(full_path):
-        search_files(full_path)
+      if os.path.isdir(ruta_completa):
+        search_files(ruta_completa)
       else:
-        size_gb = os.stat(full_path).st_size / 1_073_741_824  # Convertir a GB
-        print(full_path, "\t\t||\t", round(size_gb, 2), "GB")
+        size_gb = os.stat(ruta_completa).st_size / 1_073_741_824  # Convertir a GB
+        print(ruta_completa, "\t\t||\t", round(size_gb, 2), "GB")
 
 search_files(r"/root/cattana/ENTRETENIMIENTO/POST ENTRETENIMIENTO/To_GALILEO")
 
