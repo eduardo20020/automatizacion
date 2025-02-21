@@ -9,7 +9,7 @@ def search_files(directorio):
 
       if os.path.isdir(ruta_completa):
           
-        if not os.listdir(ruta):
+        if not os.listdir(ruta_completa):
             print(f"\n\t\tCARPETA VACIA: {item}\n")
         else:
             search_files(ruta_completa)
